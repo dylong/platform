@@ -1,13 +1,12 @@
 # 微信小程序商城（Java版）
 
-[![Fork me on Gitee](https://gitee.com/fuyang_lipengjun/platform/widgets/widget_3.svg?color=C71D24)](https://gitee.com/fuyang_lipengjun/platform)
+
 
 ## 官方首页
 * [演示地址](http://fly2you.cn)
 * [最新开发文档](http://fly2you.cn/guide/index)
 
-* 官方QQ群：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=75689ba2797dd88a208446088b029fbdeba87a29315ff2a021a6731f22ef5052"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="platform-wechat-mall" title="platform-wechat-mall"></a>
-* git：[https://gitee.com/fuyang_lipengjun/platform](https://gitee.com/fuyang_lipengjun/platform)
+
 * 基础架构版
     * git：[https://gitee.com/fuyang_lipengjun/platform-framework](https://gitee.com/fuyang_lipengjun/platform-framework)
 * 代码生成工具IDEA插件
@@ -55,6 +54,7 @@ platform-wechat-mall
 
 ## 自动代码生成结构
 ~~~
+platform-shop 项目下
 AutoCode
 ├─menu.sql                      创建菜单的sql
 │ 
@@ -142,7 +142,7 @@ AutoCode
 * 配置环境（推荐jdk1.8、maven3.3、tomcat8、mysql5.7、redis4.0.1）
 * 创建数据库
 * 初始化sql脚本 /doc/platform.sql
-* 导入项目到IDE中
+* 导入项目到eclipse IDE中
 * 导入支付证书至/platform-shop/src/main/resources/cert/目录下（申请商户号、开通微信支付、下载支付证书）
 * 修改配置文件 /platform-admin/src/main/resources/dev/platform.properties
     * jdbc.url
@@ -157,7 +157,9 @@ AutoCode
 * 修改配置文件 /platform-admin/src/main/resources/j2cache.properties
     * redis.hosts
     * redis.password
-* 启动后台项目（参照启动手册）
+* 启动后台项目 
+    * maven 编译platform-common
+    * 在tomcat下启动项目platform-framework
 * 打开微信开发者工具
 * 导入 /wx-mall填写appId
 * 修改 /wx-mall/config/app.js里NewApiRootUrl的值
@@ -169,9 +171,7 @@ AutoCode
 ## 生产环境打包
     platform-wechat-mall>mvn package -P prod
 
-***
-### 关注微信公众号，第一时间获取项目最新动向，即将推出视频教程
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/20180708/qr.jpg "微信公众号")
+
 
 ## 页面展示
 ### 登录页面
@@ -198,24 +198,3 @@ AutoCode
 ![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/20180727/11.png "并联手机")
 ### VUE页面
 ![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/20180727/12.png "VUE页面")
-
-***
-## 小程序客户案例
-
-### 美平超市
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/case/1.png "美平超市")
-### 便利主义超市
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/case/2.png "便利主义超市")
-### 汽车人E车宝
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/case/3.png "汽车人E车宝")
-### 海数据在线
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/case/4.jpg "海数据在线")
-### T客定制
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/upload/case/2018070801.jpg "T客定制")
-### 开发文档目录
-![](https://platform-wxmall.oss-cn-beijing.aliyuncs.com/catalog.png "开发文档目录")
-
-
-***
-## ◆免责条款:
-**_感谢您的支持，此系统供个人学习、研究之用。如因使用本系统引起的相关法律法规责任，由使用者自行负责。_**
